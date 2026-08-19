@@ -1,0 +1,294 @@
+.scsms-header {
+  height: var(--header-height);
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.scsms-header__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scsms-header__menu-btn {
+  display: none;
+  color: var(--text-muted);
+  padding: 0.375rem;
+  border-radius: var(--radius-sm);
+  align-items: center;
+  justify-content: center;
+}
+
+.scsms-header__menu-btn:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-main);
+}
+
+.scsms-header__brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.scsms-header__institution {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+}
+
+.scsms-header__system-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.scsms-header__right {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+/* Role Switcher */
+.scsms-header__role-switcher-container {
+  position: relative;
+}
+
+.scsms-header__role-switcher-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-size: 0.8125rem;
+  transition: all var(--transition-fast);
+}
+
+.scsms-header__role-switcher-btn:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--primary);
+}
+
+.scsms-header__role-icon {
+  color: var(--primary);
+}
+
+/* Icon Buttons */
+.scsms-header__icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.scsms-header__icon-btn:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+
+/* Profile Menu */
+.scsms-header__profile-container {
+  position: relative;
+}
+
+.scsms-header__profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-lg);
+  transition: background-color var(--transition-fast);
+}
+
+.scsms-header__profile-btn:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+.scsms-header__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+.scsms-header__avatar--large {
+  width: 44px;
+  height: 44px;
+  font-size: 1rem;
+}
+
+.scsms-header__user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.scsms-header__user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.scsms-header__user-role {
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
+
+/* Dropdowns */
+.scsms-header__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 0.5rem;
+  z-index: 110;
+  animation: scaleIn 0.15s ease-out;
+  min-width: 220px;
+}
+
+.scsms-header__role-dropdown {
+  width: 260px;
+}
+
+.scsms-header__dropdown-header {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 0.375rem;
+}
+
+.scsms-header__role-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.scsms-header__role-option:hover {
+  background-color: var(--bg-surface-hover);
+}
+
+.scsms-header__role-option--active {
+  background-color: var(--primary-subtle);
+}
+
+.scsms-header__current-tag {
+  font-size: 0.6875rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.scsms-header__profile-dropdown {
+  width: 280px;
+}
+
+.scsms-header__profile-dropdown-user {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.75rem;
+}
+
+.scsms-header__profile-dropdown-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.scsms-header__profile-dropdown-email {
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+  margin-bottom: 0.25rem;
+}
+
+.scsms-header__dropdown-divider {
+  height: 1px;
+  background-color: var(--border-subtle);
+  margin: 0.375rem 0;
+}
+
+.scsms-header__dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.scsms-header__dropdown-item:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-main);
+}
+
+.scsms-header__dropdown-item--danger {
+  color: var(--danger-600);
+}
+
+.scsms-header__dropdown-item--danger:hover {
+  background-color: var(--danger-50);
+  color: var(--danger-700);
+}
+
+[data-theme='dark'] .scsms-header__dropdown-item--danger:hover {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+@media (max-width: 1024px) {
+  .scsms-header__menu-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .scsms-header {
+    padding: 0 1rem;
+  }
+  .scsms-header__system-title {
+    display: none;
+  }
+  .scsms-header__user-info {
+    display: none;
+  }
+}
